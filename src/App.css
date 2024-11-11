@@ -1,0 +1,172 @@
+/* General reset and layout styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #f0f8ff, #a3c2f7);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Container for the app */
+#root {
+  width: 100%;
+  max-width: 800px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  overflow: hidden;
+  animation: slideIn 0.5s ease-out;
+}
+
+/* Title styles */
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #4CAF50;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Header text styling */
+h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+/* Action List Styles */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+li button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+li button:hover {
+  background-color: #45a049;
+}
+
+/* Impact Summary Section */
+.impact-summary {
+  background-color: #f1f8f4;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.impact-summary p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.impact-message {
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-align: center;
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+}
+
+.impact-message.red {
+  background-color: #f44336;
+  color: white;
+}
+
+.impact-message.orange {
+  background-color: #ff9800;
+  color: white;
+}
+
+.impact-message.green {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Clear All Button */
+button.clear {
+  background-color: #f44336;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+button.clear:hover {
+  background-color: #d32f2f;
+}
+
+/* Action Component */
+span {
+  font-weight: bold;
+}
+
+span, button {
+  margin-left: 8px;
+}
+
+/* Default message when no actions are tracked */
+.no-actions {
+  color: #888;
+  font-style: italic;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+/* Animation */
+@keyframes slideIn {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
